@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Hello World</title>
+        <title>自己動手寫網站</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,23 +34,21 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#">Hello World</a>
+                        <a class="navbar-brand" href="index.html">Hello World</a>
                     </div>
                     <div id="navbar" class="collapse navbar-collapse">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="#" id="home">首頁</a></li>
-                            <li><a href="#about" id="about">關於我們</a></li>
-                            <li><a href="#contact" id="contact">聯絡我們</a></li>
+                            <li class="active"><a href="index.html">首頁</a></li>
+                            <li><a href="develope.html">開發環境</a></li>
+                            <li><a href="about.html">關於我們</a></li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">下拉選單 <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
+                                    <li><a href="lesson1.html">Lesson 1</a></li>
+                                    <li><a href="lesson2.html">Lesson 2</a></li>
+                                    <li><a href="lesson3.html">Lesson 3</a></li>
                                     <li role="separator" class="divider"></li>
-                                    <li class="dropdown-header">Nav header</li>
-                                    <li><a href="#">Separated link</a></li>
-                                    <li><a href="#">One more separated link</a></li>
+                                    <li><a href="#">建置中</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -60,6 +58,7 @@
 
             <!-- Begin page content -->
             <div class="container" id="main">
+
             </div>
 
             <!-- Begin footer -->
@@ -75,23 +74,23 @@
     </body>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="jquery-1.11.3.min.js"></script>
+    <script src="scripts/jquery-1.11.3.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap-3.3.5/js/bootstrap.min.js"></script>
 
     <script>
-        $(document).ready(function(){ 
-
-
+        $( document ).ready(function() {
+            $('#navbar ul li a').on('click',function(){
+                removeAllActiveLi();
+                $(this).parent().addClass('active');
+                //.parent.addClass('active');
+            });
         });
 
-        $(function(){
-            $("a#home").click(function() {
-                var iframeTemplate = '<iframe width="100%" height="100%" src="contact.html"></iframe>'
-                $("#main").append(iframeTemplate);
-            })
-        })
 
+        function removeAllActiveLi(){
+            $('#navbar ul li').removeClass('active');
+        }
 
     </script>
 </html>
