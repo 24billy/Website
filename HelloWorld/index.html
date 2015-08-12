@@ -38,15 +38,15 @@
                     </div>
                     <div id="navbar" class="collapse navbar-collapse">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="index.html">首頁</a></li>
-                            <li><a href="develope.html">開發環境</a></li>
-                            <li><a href="about.html">關於我們</a></li>
+                            <li class="active"><a target="home.html">首頁</a></li>
+                            <li><a target="develope.html">開發環境</a></li>
+                            <li><a target="about.html">關於我們</a></li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">下拉選單 <span class="caret"></span></a>
+                                <a  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">下拉選單 <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="lesson1.html">Lesson 1</a></li>
-                                    <li><a href="lesson2.html">Lesson 2</a></li>
-                                    <li><a href="lesson3.html">Lesson 3</a></li>
+                                    <li><a target="lesson1.html">Lesson 1</a></li>
+                                    <li><a target="lesson2.html">Lesson 2</a></li>
+                                    <li><a target="lesson3.html">Lesson 3</a></li>
                                     <li role="separator" class="divider"></li>
                                     <li><a href="#">建置中</a></li>
                                 </ul>
@@ -58,13 +58,7 @@
 
             <!-- Begin page content -->
             <div class="container" id="main">
-                <ul class="list-side">
-                    <li><a target="a.html" >about</a></li>
-                    <li><a target="b.html" >news</a></li>
-                    <li><a target="c.html" >product</a></li>
-                    <li><a href="http://ucmic.blogspot.com/" target="_blank" >contact</a></li>
-                </ul>
-                <div id="iframe"></div>
+
             </div>
 
             <!-- Begin footer -->
@@ -76,6 +70,16 @@
             </footer>
 
 
+            <!-- Hidden page List-->
+            <ul class="list-side hidden">
+                <li><a target="home.html" >home</a></li>
+                <li><a target="develope.html" >develope</a></li>
+                <li><a target="about.html" >about</a></li>
+                <li><a target="lesson1.html" >lesson1</a></li>
+                <li><a target="lesson2.html" >lesson2</a></li>
+                <li><a target="lesson3.html" >lesson3</a></li>
+                <li><a href="http://www.google.com" target="_blank" >google</a></li>
+            </ul>
         </div>
     </body>
 
@@ -86,27 +90,30 @@
 
     <script>
         $( document ).ready(function() {
-            $('#navbar ul li a').on('click',function(){
-                removeAllActiveLi();
-                $(this).parent().addClass('active');
-                //.parent.addClass('active');
-            });
-
-            $.get("a.html",function(data){ //初始將a.html include div#iframe
-                $("#iframe").html(data);
-            }); 
-            $(function(){
-                $('.list-side li').click(function() {
-                    // 找出 li 中的超連結 href(#id)
-                    var $this = $(this),
-                        _clickTab = $this.find('a').attr('target'); // 找到連結a中的targer標籤值
-                    $.get(_clickTab,function(data){
-                        $("#iframe").html(data); 
-                    });
-                })
+            $.get("home.html",function(data){ //初始將home.html include div#main
+                $("#main").html(data);
             })
+
         });
 
+        $('#navbar ul li a').on('click',function(){
+            if($(this).hasClass('dropdown-toggle')){
+                return;
+            }
+
+            // 改變navbar的選取狀態
+            removeAllActiveLi();
+            $(this).parent().addClass('active');
+
+
+            // 取得目前點選的target
+            var $this = $(this);
+            var _clickTab = $this.attr('target');
+
+            $.get(_clickTab,function(data){
+                $("#main").html(data); 
+            });
+        });
 
         function removeAllActiveLi(){
             $('#navbar ul li').removeClass('active');
