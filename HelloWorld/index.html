@@ -25,7 +25,7 @@
     <body>
         <div class="container">
             <!-- Fixed navbar -->
-            <nav class="navbar navbar-default navbar-fixed-top">
+            <nav class="navbar navbar-inverse navbar-fixed-top">
                 <div class="container">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -58,12 +58,18 @@
 
             <!-- Begin page content -->
             <div class="container" id="main">
-                <h3>首頁</h3>
+                <ul class="list-side">
+                    <li><a target="a.html" >about</a></li>
+                    <li><a target="b.html" >news</a></li>
+                    <li><a target="c.html" >product</a></li>
+                    <li><a href="http://ucmic.blogspot.com/" target="_blank" >contact</a></li>
+                </ul>
+                <div id="iframe"></div>
             </div>
 
             <!-- Begin footer -->
 
-            <footer class="navbar navbar-default navbar-fixed-bottom">
+            <footer class="navbar navbar-inverse navbar-fixed-bottom">
                 <div class="container-fluid">
                     <p class="text-muted text-center">&#169; 2015 益友 All Rights Reserved</p>
                 </div>
@@ -85,6 +91,20 @@
                 $(this).parent().addClass('active');
                 //.parent.addClass('active');
             });
+
+            $.get("a.html",function(data){ //初始將a.html include div#iframe
+                $("#iframe").html(data);
+            }); 
+            $(function(){
+                $('.list-side li').click(function() {
+                    // 找出 li 中的超連結 href(#id)
+                    var $this = $(this),
+                        _clickTab = $this.find('a').attr('target'); // 找到連結a中的targer標籤值
+                    $.get(_clickTab,function(data){
+                        $("#iframe").html(data); 
+                    });
+                })
+            })
         });
 
 
