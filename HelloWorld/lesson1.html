@@ -2,7 +2,9 @@
 <html>
     <body>
         <h1>第一堂課，來學HTML吧！</h1>
-        <p><a href="http://www.w3schools.com/tags/">參考w3schools</a></p>
+        <p><a href="http://www.w3schools.com/tags/" target="_blank">參考w3schools</a></p>
+        <p><a href="http://www.w3school.com.cn/html/" target="_blank">參考w3schools(26版)</a></p>
+        
         <div class="panel panel-primary">
             <div class="panel-heading">
                 <h3>常用文字標籤</h3>
@@ -14,13 +16,72 @@
                 <h4>Hello World</h4>
                 <h5>Hello World</h5>
                 <h6>Hello World</h6>
+                <code>
+                    &lt;h6&gt;Hello World&lt;/h6&gt;
+                </code>
                 <hr>
                 <p>Hello World</p>
                 <p>Hello World</p>
                 <p>Hello World</p>
-                
+                <code>
+                    &lt;p&gt;Hello World&lt;/p&gt;
+                </code>
             </div>
         </div>
         
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h3>項目清單</h3>
+            </div>
+            <div class="panel-body">
+                <h4>一般常用的圓點或數字編號</h4>
+                <div style="width:400px;display:inline;">
+                    <ul>
+                        <li>Math</li>
+                        <li>Chineses</li>
+                        <li>English</li>
+                        <li>Art</li>
+                    </ul>
+                </div>
+                <code>
+                &lt;ul&gt;
+                        &lt;li&gt;Math&lt;/li&gt;
+                        &lt;li&gt;Chineses&lt;/li&gt;
+                        &lt;li&gt;English&lt;/li&gt;
+                        &lt;li&gt;Art&lt;/li&gt;
+                &lt;/ul&gt;
+                </code>
+                <div style="width:400px;display:inline;">
+                    <ol>
+                        <li>Math</li>
+                        <li>Chineses</li>
+                        <li>English</li>
+                        <li>Art</li>
+                    </ol>
+                </div>
+                
+                <h4>加入CSS樣式的效果</h4>
+                <div class="list-group" style="width:150px;">
+                  <a class="list-group-item" href="#"><i class="fa fa-home fa-fw"></i>&nbsp; Home</a>
+                  <a class="list-group-item" href="#"><i class="fa fa-book fa-fw"></i>&nbsp; Library</a>
+                  <a class="list-group-item" href="#"><i class="fa fa-pencil fa-fw"></i>&nbsp; Applications</a>
+                  <a class="list-group-item" href="#"><i class="fa fa-cog fa-fw"></i>&nbsp; Settings</a>
+                </div>
+            </div>
+        
+            <div class="panel panel-danger">
+                <div class="panel-heading">
+                    <h3>輸入框與按鈕</h3>
+                </div>
+                <div class=panel-body>
+                    <div>
+                        <input type="text"><button type="button">查詢</button>
+                    </div>
+                    <code>
+                         &lt;input type="text"&gt; &lt;button type="button"&gt;查詢 &lt;/button&gt;
+                    </code>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
