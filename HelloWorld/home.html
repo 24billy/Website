@@ -1,22 +1,88 @@
 <!-- 壽頁資訊 -->
 <!DOCTYPE html>
-<ol>
-    <li>
-        <h3>為什麼要學網站？</h3>
-        <p>沒有為什麼，因為就是想學。</p>
-    </li>
-    <li>
-        <h3>什麼是網站，由什麼東西構成？</h3>
-        <p>網站由幾個元素構成：(一)html、(二)CSS樣式、(三)javascript凾式。</p>
-        <p>html是一種網頁的語言，由各種標籤組成。</p>
-        <p>CSS樣式是網頁的裝飾工具，處理視覺的效果。</p>
-        <p>javascript是網頁事件的控制器，處理使用者操作後的邏輯和結果。</p>
-    </li>
-    <li>
-        <h3>
-            <a href="http://www.google.com" target="_blank">Google 首頁</a>
-        </h3>
-    </li>
-</ol>
+
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#homework" aria-controls="homework" role="tab" data-toggle="tab">作業</a></li>
+    <li role="presentation"><a href="#intro" aria-controls="intro" role="tab" data-toggle="tab">簡介</a></li>
+    <li role="presentation"><a href="#other" aria-controls="other" role="tab" data-toggle="tab">其他</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane fade in active" id="homework">
+        <span class="label label-primary">作業1--基本html tag使用</span>
+        <div>
+            <p>還記得學到的幾個簡單標籤&lt;h1&gt;、&lt;p&gt;、&lt;input&gt;、&lt;ul&gt;、&lt;li&gt;、&lt;div&gt;、&lt;input&gt;、&lt;button&gt;、&lt;hr&gt;、&lt;br&gt;</p>
+            <p>試著利用以上標籤完成與下面相同的畫面配置：(不用加入CSS樣式)</p>
+            <a href="template.html" target="_blank">樣版頁面(請下載此頁面並使用bracket編輯)</a>
+            <div class="bg-success">
+                <h1>六書</h1>
+                <hr>
+                <ul>
+                    <li>象形</li>
+                    <li>指事</li>
+                    <li>會意</li>
+                    <li>形聲</li>
+                    <li>轉注</li>
+                    <li>假借</li>
+                </ul>
+                <br>
+                <h3>請問中文字的主流，也是中文裡最多的造字方式為六書的哪一種？</h3>
+                <input type="text" placeholder="請在此輸入答案" id="sixBooks"><button type="button" id="buttonSixBooks">送出</button>
+            </div>
+
+        </div>
+
+        <hr>
+        <span class="label label-primary">作業2--簡單css應用</span>
+        <div>
+
+        </div>
+
+        <hr>
+        <span class="label label-primary">作業3</span>
+        <div>
+
+        </div>
+
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="intro">
+        <h3 class="label label-primary">網站簡介</h3>
+        <ol>
+            <li>
+                <h3>什麼是網站，由什麼東西構成？</h3>
+                <p>網站由幾個元素構成：(一)html、(二)CSS樣式、(三)javascript凾式。</p>
+                <p>html是一種網頁的語言，由各種標籤組成。</p>
+                <p>CSS樣式是網頁的裝飾工具，處理視覺的效果。</p>
+                <p>javascript是網頁事件的控制器，處理使用者操作後的邏輯和結果。</p>
+            </li>
+            <li>
+                <h3>看看Google的結構吧，使用Chrome的除錯模式(F12)</h3>
+                <h3>
+                    <a href="http://www.google.com" target="_blank">Google 首頁</a>
+                </h3>
+            </li>
+        </ol>
+    </div>
+    <div role="tabpanel" class="tab-pane fade" id="other">
+        <h3 class="label label-primary">其他</h3>
+        <p>目前沒東西。</p>
+    </div>
+</div>    
+
+<script>
+    var buttonSixBook = $("button#buttonSixBooks");
+    buttonSixBook.on("click",function(){
+        var sixBooks = $("input#sixBooks");
+        if( sixBooks.val() == "形聲") {
+            alert("恭喜你，答對了！");
+        } else {
+            alert("答錯了！再想想。");
+        }
+
+    });
+
+</script>
 
 </html>
