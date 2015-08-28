@@ -1,35 +1,107 @@
 <!DOCTYPE html>
 <html>
     <body>
-        <h3>環境設置</h3>
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
-            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">安裝</a></li>
-            <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">使用</a></li>
-            <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">其他</a></li>
+            <li role="presentation" class="active"><a href="#install" aria-controls="install" role="tab" data-toggle="tab">開發工具</a></li>
+            <li role="presentation"><a href="#reference" aria-controls="reference" role="tab" data-toggle="tab">參考網站</a></li>
+            <li role="presentation"><a href="#learning" aria-controls="learning" role="tab" data-toggle="tab"> 學習資源</a></li>
         </ul>
 
         <!-- Tab panes -->
         <div class="tab-content">
-            <div role="tabpanel" class="tab-pane fade in active" id="home">
-                <h3>下載工具</h3>
-                <p><a href="http://brackets.io/" target="_blank">brackets</a></p>
-                <p><a href="https://github.com/adobe/brackets/releases/tag/release-1.0">建議使用1.0版</a></p>
-                <p>一直點下一步安裝吧！</p>
-                <h3>使用瀏覽器</h3>
-                <p>Chrome</p>
-                <h3>為什麼使用Chrome</h3>
-                <p>因為要使用他的除錯模式，較其他瀏覽器方便。</p>
+            <div role="tabpanel" class="tab-pane fade in active" id="install">
+
+                <div>
+                    <table class="table table-striped">
+                        <tr  class="info">
+                            <td>名稱</td>
+                            <td>功能</td>
+                            <td>特色</td>
+                            <td>參考連結</td>
+                        </tr>
+                        <tr>
+                            <td>brackets</td>
+                            <td>文字編輯器</td>
+                            <td>支援多種語言的函式庫</td>
+                            <td>
+                                <a href="https://github.com/adobe/brackets/releases/tag/release-1.0" target="_blank">建議使用1.0版</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Chrome</td>
+                            <td>瀏覽器，使用除錯模式</td>
+                            <td>方便分析網站規畫與原始碼</td>
+                            <td>
+                                <a href="https://www.google.com.tw/chrome/browser/desktop/" target="_blank">Chrome載點</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Git</td>
+                            <td>版本控制系統</td>
+                            <td>方便分享自己的程式碼</td>
+                            <td>
+                                <a href="http://backlogtool.com/git-guide/tw/" target="_blank">連鍭子都能懂的Git入門指南</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
             </div>
-            <div role="tabpanel" class="tab-pane fade" id="profile">
-                <h3>Bracket的好處</h3>
-                <p>自動完成。</p>
-                <p>按下alt + / ，可以省去很多背訟方法與函式名稱的時間。</p>
-                
-                <p class="warning">試一試製作一個簡單的Hello World網頁吧。</p>
+
+            <div role="tabpanel" class="tab-pane fade" id="reference">
+
+                <div>
+                    <table class="table table-striped">
+                        <tr  class="info">
+                            <td>名稱(連結)</td>
+                            <td>功能</td>
+                            <td>特色</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="http://codepen.io/" target="_blank">codepen</a>
+                            </td>
+                            <td>可將寫好的程式碼貼在網站上執行</td>
+                            <td>網站上有很多傑出的作品</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="https://jsfiddle.net/" target="_blank">jsfiddle</a>
+                            </td>
+                            <td>可將寫好的code貼在網站上執行</td>
+                            <td>支援時下流行的js與css外掛，可直接在下拉選單中點選</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="http://www.w3schools.com/tags/" target="_blank">w3schools</a>
+                            </td>
+                            <td>全世界最大的網站製作資源網站(好繞口)</td>
+                            <td>可查詢各種html,js,css語法與使用範例</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="http://www.w3school.com.cn/html/" target="_blank">w3school強國版</a>
+                            </td>
+                            <td>不想看原文的可以看殘體字版</td>
+                            <td>只能意會不能言傳</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
-            <div role="tabpanel" class="tab-pane fade" id="settings">
-                <h3>上課想到的問題補充在這</h3>
+            <div role="tabpanel" class="tab-pane fade" id="learning">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <a href="https://www.codecademy.com/zh/learn" target="_blank">codecademy</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://zh-tw.learnlayout.com/" target="_blank">學習CSS</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://www.imooc.com/" target="_blank">強國人的慕課網</a>
+                    </li>
+                </ul>
+
             </div>
         </div>
     </body>
