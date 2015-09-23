@@ -4,7 +4,7 @@
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">
     <li role="presentation" class="active"><a href="#announcement" aria-controls="announcement" role="tab" data-toggle="tab">公告</a></li>
-    <li role="presentation"><a href="#intro" aria-controls="intro" role="tab" data-toggle="tab">簡介</a></li>
+    <li role="presentation"><a href="#comment" aria-controls="comment" role="tab" data-toggle="tab">留言專區</a></li>
     <li role="presentation"><a href="#update" aria-controls="update" role="tab" data-toggle="tab">更新紀錄</a></li>
 </ul>
 
@@ -17,6 +17,10 @@
         </h3>
         <div>
             <table class="table table-primary table-striped">
+                <tr>
+                    <td>2015/9/23</td>
+                    <td>[首頁]新增留言專區，歡迎大家前往留言(需登入Facebook)。</td>
+                </tr>
                 <tr>
                     <td>2015/9/14</td>
                     <td>作業三、作業四已更新，關於我們已加入各位夥伴的github頁面連結。</td>
@@ -31,7 +35,7 @@
                 </tr>
             </table>
         </div>
-        
+
         <h3 class="label label-success">
             上課時間
         </h3>
@@ -43,9 +47,14 @@
                     <td>備註</td>
                 </tr>
                 <tr>
+                    <td>2015/9/29</td>
+                    <td>進階CSS，javascript入門</td>
+                    <td>css,js</td>
+                </tr>
+                <tr>
                     <td>2015/9/5</td>
                     <td>表格、超連結、圖片、操作多分頁</td>
-                    <td>html</td>
+                    <td>html,css</td>
                 </tr>
                 <tr>
                     <td>2015/9/1</td>
@@ -65,24 +74,29 @@
             </table>
         </div>
     </div>
-    <div role="tabpanel" class="tab-pane fade" id="intro">
+    <div role="tabpanel" class="tab-pane fade" id="comment">
         <br>
-        <h3 class="label label-primary">網站簡介</h3>
-        <ol>
-            <li>
-                <h3>什麼是網站，由什麼東西構成？</h3>
-                <p>網站由幾個元素構成：(一)html、(二)CSS樣式、(三)javascript凾式。</p>
-                <p>html是一種網頁的語言，由各種標籤組成。</p>
-                <p>CSS樣式是網頁的裝飾工具，處理視覺的效果。</p>
-                <p>javascript是網頁事件的控制器，處理使用者操作後的邏輯和結果。</p>
-            </li>
-            <li>
-                <h3>看看Google的結構吧，使用Chrome的除錯模式(F12)</h3>
-                <h3>
-                    <a href="http://www.google.com" target="_blank">Google 首頁</a>
-                </h3>
-            </li>
-        </ol>
+
+        <!-- 留言專區-->
+        <div class="alert alert-success" role="alert">
+            <b>留言專區 </b>
+            
+        </div>
+        <br>
+
+        <div class="fb-comments" data-href="http://developers.facebook.com/docs/plugins/comments/eeyo_good_friends" data-width="100%" data-numposts="6"></div>
+
+        <!-- Facebook 留言外掛 -->
+        <div id="fb-root"></div>
+        <script>
+            (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.4";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
     </div>
     <div role="tabpanel" class="tab-pane fade" id="update">
         <div>
@@ -91,6 +105,11 @@
                     <td>日期</td>
                     <td>更新內容</td>
                     <td>備註</td>
+                </tr>
+                <tr>
+                    <td>2015/9/23</td>
+                    <td>新增留言功能</td>
+                    <td>使用facebook comment plugin</td>
                 </tr>
                 <tr>
                     <td>2015/8/28</td>
