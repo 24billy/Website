@@ -4,7 +4,7 @@
         <h1>HTML與CSS</h1>
         <p><a href="http://www.w3schools.com/tags/" target="_blank">參考w3schools</a></p>
         <p><a href="http://www.w3school.com.cn/html/" target="_blank">參考w3schools(26版)</a></p>
-        
+
         <div class="panel panel-primary">
             <div class="panel-heading">
                 <h3>常用文字標籤</h3>
@@ -28,7 +28,7 @@
                 </code>
             </div>
         </div>
-        
+
         <div class="panel panel-success">
             <div class="panel-heading">
                 <h3>項目清單</h3>
@@ -44,12 +44,12 @@
                     </ul>
                 </div>
                 <code>
-                &lt;ul&gt;
-                        &lt;li&gt;Math&lt;/li&gt;
-                        &lt;li&gt;Chineses&lt;/li&gt;
-                        &lt;li&gt;English&lt;/li&gt;
-                        &lt;li&gt;Art&lt;/li&gt;
-                &lt;/ul&gt;
+                    &lt;ul&gt;
+                    &lt;li&gt;Math&lt;/li&gt;
+                    &lt;li&gt;Chineses&lt;/li&gt;
+                    &lt;li&gt;English&lt;/li&gt;
+                    &lt;li&gt;Art&lt;/li&gt;
+                    &lt;/ul&gt;
                 </code>
                 <div style="width:400px;display:inline;">
                     <ol>
@@ -59,17 +59,17 @@
                         <li>Art</li>
                     </ol>
                 </div>
-                
+
                 <h4>加入CSS樣式的效果</h4>
                 <div class="list-group" style="width:150px;">
-                  <a class="list-group-item" href="#"><i class="fa fa-home fa-fw"></i>&nbsp; Home</a>
-                  <a class="list-group-item" href="#"><i class="fa fa-book fa-fw"></i>&nbsp; Library</a>
-                  <a class="list-group-item" href="#"><i class="fa fa-pencil fa-fw"></i>&nbsp; Applications</a>
-                  <a class="list-group-item" href="#"><i class="fa fa-cog fa-fw"></i>&nbsp; Settings</a>
+                    <a class="list-group-item" href="#"><i class="fa fa-home fa-fw"></i>&nbsp; Home</a>
+                    <a class="list-group-item" href="#"><i class="fa fa-book fa-fw"></i>&nbsp; Library</a>
+                    <a class="list-group-item" href="#"><i class="fa fa-pencil fa-fw"></i>&nbsp; Applications</a>
+                    <a class="list-group-item" href="#"><i class="fa fa-cog fa-fw"></i>&nbsp; Settings</a>
                 </div>
             </div>
         </div>
-        
+
         <div class="panel panel-danger">
             <div class="panel-heading">
                 <h3>輸入框與按鈕</h3>
@@ -79,10 +79,83 @@
                     <input type="text"><button type="button">查詢</button>
                 </div>
                 <code>
-                     &lt;input type="text"&gt; &lt;button type="button"&gt;查詢 &lt;/button&gt;
+                    &lt;input type="text"&gt; &lt;button type="button"&gt;查詢 &lt;/button&gt;
                 </code>
             </div>
         </div>
-        
+
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h3>表格</h3>
+            </div>
+            <div class=panel-body>
+                <h4>為了讓版面看起來整齊，或是放入資料表。</h4>
+                <br>
+                <div>
+                    <table id="myTable">
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                        </tr>
+                    </table>
+                </div>
+                <style>
+                    #myTable tr td{
+                        border: solid black 1px;
+                    }
+                    #myTable tr td{
+                        width: 50px;
+                        text-align: center;
+                        vertical-align: middle;
+                    }
+                </style>
+                <br>
+                <code>
+                    <p>&lt;table&gt;</p>
+                        <p>  &lt;tr&gt;</p>
+                            <p>    &lt;td&gt;1&lt;/td&gt;</p>
+                            <p>    &lt;td&gt;2&lt;/td&gt;</p>
+                            <p>    &lt;td&gt;3&lt;/td&gt;</p>
+                        <p>  &lt;/tr&gt;</p>
+                        <p>  &lt;tr&gt;</p>
+                            <p>    &lt;td&gt;4&lt;/td&gt;</p>
+                            <p>    &lt;td&gt;5&lt;/td&gt;</p>
+                            <p>    &lt;td&gt;6&lt;/td&gt;</p>
+                        <p>  &lt;/tr&gt;</p>
+                        <p>  &lt;tr&gt;</p>
+                            <p>    &lt;td&gt;7&lt;/td&gt;</p>
+                            <p>    &lt;td&gt;8&lt;/td&gt;</p>
+                            <p>    &lt;td&gt;9&lt;/td&gt;</p>
+                        <p>  &lt;/tr&gt;</p>
+                    <p>&lt;/table&gt;</p>
+                </code>
+            </div>
+        </div>
+
+        <div class="panel panel-danger">
+            <div class="panel-heading">
+                <h3>超連結</h3>
+            </div>
+            <div class=panel-body>
+                <div>
+                    <a href="www.google.com">點我往Google首頁。</a>
+                </div>
+                <code>
+                    &lt;input type="text"&gt; &lt;button type="button"&gt;查詢 &lt;/button&gt;
+                    &lt;a&gt; href="www.google.com">點我往Google首頁。&lt;/a&gt;
+                </code>
+            </div>
+        </div>
     </body>
 </html>
